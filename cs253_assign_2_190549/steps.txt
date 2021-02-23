@@ -1,0 +1,10 @@
+1. We used wget command to get the json and was saved in data.json which we converted to the desired name using mv command.
+2. We set headers for the csv file.
+3. First loop is on the states so that through each iteration we find the desired district for that particular state.
+4. The main problem In encounteres was to pass district names as parameter for those which consisted of space, I tried a lot of ways and I finally saved these to a new file so that I don't have to pass them as arguments and read through each line with the help of while loop.
+5. The further code is simple and just poses the necessary conditions that was given to us in the assignment pdf.
+6. After each iteration we pass the desired district if exists to the csv file.
+
+Refernces
+https://stackoverflow.com/questions/8654051/how-to-compare-two-floating-point-numbers-in-bash  (for the bc command)
+A lot of googling was required for the comaprison in if-else :)
