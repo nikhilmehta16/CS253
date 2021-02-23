@@ -1,0 +1,19 @@
+file ./a to know type of something.
+Compilation ToolChain--> 
+Preprocessing --> cpp a.c (preprocessed file #include #define)
+Substituted #define --> Compilation takes preproceesd file and turns it to assembly file -->
+g++ -S a.c (produces assembly file a.s)-->
+as (this is assembler) so do "as a.s -o a.0" this translated to binary code-->
+Still Not Linked. -->
+ld is the linker in linux system "ld a.o /lib/x86_64-linux-gnu/libc.so.6
+"  or "ld a.o -lc" lc is for lib + libc lib, l for library.-->
+_start instead of main because _start calls main, sir did it directly in the lecture-->
+
+
+gcc -S a.c allsas a.Sas a.s -o a.ld a.0 -lc -o a.out
+
+finally executable to decompilers a.o to a.s (disassembly)
+"objdump -d a.out"
+
+dynamically linked strip a.out now it is stripped extra info is removed metadata-->
+dynamic is attached at time of process rather static is attached to binary file.
