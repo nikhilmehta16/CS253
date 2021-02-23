@@ -1,0 +1,10 @@
+Firstly we have to generate n random test cases, which is done with the help of c++ program named testgenerate.cpp, this program uses srand and rand functions to generate the random test cases.
+These Test cases are automatically saved serial wise in folder named tests.
+Now the objective is to select the subsuit of k tests which gives us the maximum branch coverage possible.
+The above task is accomplished as follows;
+Firstly we choose the test with maximum branch coverage say T1 (this test will definitely be present in the 
+subsuit as no other 1 test case this branch coverage)--->
+Now we have to add another Test T2 such that branch coverage of T1 union T2 is maximum (Now T1 is fixed) so we apply a loop searching for T2 which
+increases the branch coverage by most.--->
+Similarly the algorithm proceeds further till we have reached k cases which gives maximum branch coverage--->
+The loop automatically ends when the branch coverage equals the branch coverage of all test cases otherwise continues to selection of k tests.

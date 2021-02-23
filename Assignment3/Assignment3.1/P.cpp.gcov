@@ -6,7 +6,7 @@
         -:    2:
         -:    3:using namespace std;
         -:    4:
-function _Z2tpii called 7 returned 100% blocks executed 40%
+function _Z2tpii called 7 returned 100% blocks executed 43%
         7:    5:int tp(int n1,int n2 ){
         7:    6:    if(n1%3==0 || n2%100==0){
 branch  0 taken 5 (fallthrough)
@@ -15,46 +15,46 @@ branch  2 taken 0 (fallthrough)
 branch  3 taken 5
         2:    7:         n1++;
         2:    8:         if(n1>n2) {
-branch  0 taken 0 (fallthrough)
-branch  1 taken 2
-    #####:    9:             n1+=2;
-    #####:   10:             if(n2%7==0) n2+=7;
-branch  0 never executed
-branch  1 never executed
-    #####:   11:             else n2-=7;
-        -:   12:         }else {
-       2*:   13:            if(n2%23==0) n2+=23;
-branch  0 taken 0 (fallthrough)
-branch  1 taken 2
-        2:   14:            else if(n2%31==0)n2+=23;
 branch  0 taken 1 (fallthrough)
 branch  1 taken 1
+        1:    9:             n1+=2;
+       1*:   10:             if(n2%7==0) n2+=7;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   11:             else n2-=7;
+        -:   12:         }else {
+       1*:   13:            if(n2%23==0) n2+=23;
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   14:            else if(n2%31==0)n2+=23;
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
         -:   15:         }
         5:   16:    }else if(n1%2==0 || n2%11==0){ 
-branch  0 taken 4 (fallthrough)
-branch  1 taken 1
+branch  0 taken 3 (fallthrough)
+branch  1 taken 2
 branch  2 taken 1 (fallthrough)
-branch  3 taken 3
-        2:   17:    n2++;
-        2:   18:         if(n1>n2) {
+branch  3 taken 2
+        3:   17:    n2++;
+        3:   18:         if(n1>n2) {
 branch  0 taken 1 (fallthrough)
-branch  1 taken 1
+branch  1 taken 2
         1:   19:             n1+=2;
        1*:   20:             if(n2%7==0) n2+=7;
 branch  0 taken 0 (fallthrough)
 branch  1 taken 1
         1:   21:             else n2-=7;
         -:   22:         }else {
-       1*:   23:            if(n2%23==0) n2+=23;
+       2*:   23:            if(n2%23==0) n2+=23;
 branch  0 taken 0 (fallthrough)
-branch  1 taken 1
-       1*:   24:            else if(n2%31==0)n2+=23;
+branch  1 taken 2
+       2*:   24:            else if(n2%31==0)n2+=23;
 branch  0 taken 0 (fallthrough)
-branch  1 taken 1
+branch  1 taken 2
         -:   25:         }    
-        3:   26:    }else if (n1==n2){
+        2:   26:    }else if (n1==n2){
 branch  0 taken 0 (fallthrough)
-branch  1 taken 3
+branch  1 taken 2
     #####:   27:        n1 = n1*2;
     #####:   28:         if(n1>n2) {
 branch  0 never executed
@@ -72,9 +72,9 @@ branch  1 never executed
 branch  0 never executed
 branch  1 never executed
         -:   35:         }
-        3:   36:    }else if (n1 > n2) {
+        2:   36:    }else if (n1 > n2) {
 branch  0 taken 1 (fallthrough)
-branch  1 taken 2
+branch  1 taken 1
         1:   37:        n2 = n2*2;
         1:   38:         if(n1==n2) {
 branch  0 taken 0 (fallthrough)
@@ -92,9 +92,9 @@ branch  1 taken 1
 branch  0 taken 0 (fallthrough)
 branch  1 taken 1
         -:   45:         }
-        2:   46:    }else if(n1%n2==0) {
+        1:   46:    }else if(n1%n2==0) {
 branch  0 taken 0 (fallthrough)
-branch  1 taken 2
+branch  1 taken 1
     #####:   47:            n1 = n2-n1;
     #####:   48:         if(n1==n2) {
 branch  0 never executed
@@ -113,9 +113,9 @@ branch  0 never executed
 branch  1 never executed
         -:   55:         }
         -:   56:
-        2:   57:    }else if(n2%n1==0) {
+        1:   57:    }else if(n2%n1==0) {
 branch  0 taken 0 (fallthrough)
-branch  1 taken 2
+branch  1 taken 1
     #####:   58:            n2 = n2-n1;
     #####:   59:         if(n1==n2) {
 branch  0 never executed
